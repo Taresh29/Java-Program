@@ -4,7 +4,7 @@ FROM openjdk:21-jdk-slim
 WORKDIR /app
 
 # Copy the java file into the container
-COPY hello.java .
+COPY hello.java /app
 
 # Compile the java file inside the container
 RUN javac hello.java
