@@ -1,14 +1,16 @@
 pipeline {
     agent any
+
     stages {
-        stage('Build') {
+        stage('Check Kubernetes') {
             steps {
-                sh 'docker build -t my-java-app:v1 .'
+                sh '/snap/bin/kubectl get nodes'
             }
         }
-        stage('Run') {
+
+        stage('Deploy') {
             steps {
-                sh 'docker run --rm my-java-app:v1'
+                sh '/snap/bin/kubectl apply -f deployment.yaml'
             }
         }
     }
