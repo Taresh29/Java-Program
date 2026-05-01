@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: my-app-container
-        image: docker pull taresh54/java-jenkins-app:latest # Replace with your image
+        image: taresh54/java-jenkins-app:latest # Replace with your image
         ports:
         - containerPort: 8080
 ---

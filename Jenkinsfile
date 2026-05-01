@@ -10,7 +10,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh '/snap/bin/kubectl apply -f deployment.yaml'
+                sh '/snap/bin/kubectl apply -f deployment.yml'
             }
         }
     }
