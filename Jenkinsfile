@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Check Kubernetes') {
             steps {
-                sh '/snap/bin/kubectl get nodes'
+                sh 'kubectl get nodes'
             }
         }
 
         stage('Deploy') {
             steps {
-                sh '/snap/bin/kubectl apply -f deployment.yml'
+                sh 'kubectl apply -f Deployment.yml'
             }
         }
     }
